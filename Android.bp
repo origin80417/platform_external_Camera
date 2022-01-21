@@ -1,0 +1,20 @@
+soong_namespace {
+}
+
+android_app_import {
+    name: "GrapheneCamera",
+
+    privileged: false,
+    product_specific: true,
+    
+    overrides: [
+         "Snap",
+         "Camera2",
+    ],
+
+    dex_preopt: {
+        enabled: false,
+    },
+    apk: "GrapheneCamera.apk",
+    presigned: true,
+}
